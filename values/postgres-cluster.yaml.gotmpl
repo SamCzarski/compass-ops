@@ -5,8 +5,6 @@ cluster:
   monitoring:
     enabled: true
 
-  superuserSecret: postgres-cluster-superuser
-
   roles:
 {{- range $name := keys .Values.env.secrets.postgres.passwords }}
     - name: {{ $name }}
